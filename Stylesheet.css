@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: .2s linear;
+    text-transform: capitalize;
+    font-family: 'Rubik', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
+/*Navigation Bar Starts*/
+
+header{
+  position: absolute;
+  top:0; right:0; left:0;
+  z-index: 1000;
+}
+
+header .wholenav{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+header .wholenav .navbar a{
+    margin-left: 2rem;
+    color: var(--light-white);
+    font-size: 2rem;
+}
+
+header .wholenav .navbar a:hover{
+    color: green;
+}
+
+header .logo{
+    cursor: pointer;
+}
+
+header .wholenav #menu-btn{
+  font-size: 3rem;
+  display: none;
+  cursor: pointer;
+}
+
+.navbar{
+    list-style: none;
+}
+
+.navbar li{
+    padding: 0px 20px; 
+    display: inline-block;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgb(37, 37, 255);
+    border: none;
+    border-radius: 50px;
+}
+
+/*Navigation Bar Ends*/
+
+.about{
+    position: relative;
+    height: 60rem;
+    background: url("Woman.jpg")  no-repeat center;
+    background-size: cover;
+  }
+
+.about .content{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  font-size: 3rem;
+  width: 30%;
+  line-height: 1.5
+}
+
+.about .content h3{
+  font-size: 4rem;
+  align-items: center;
+}
+
+section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.heading{
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 4rem;
+}
+
+/* Lookbook Starts */
+
+.lookbook .container h3{
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+.container .image-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+  }
+
+.setone, .settwo, .setthree{
+    display: flex;
+    flex-direction: column;
+}
+  
+  .container .image-container .image{
+    width: 350px;    
+}
+
+  .imagesq, .imagerec{
+    width:360px;
+    height:360px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    overflow: hidden; 
+    cursor: pointer;
+  }
+  
+  .imagerec{
+    height: 760px;
+  }
+  
+  .container .image-container .imagesq img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 5px solid white;
+  }
+
+  .container .image-container .imagerec img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 5px solid white;
+  }
+
+  .container .image-container .image:hover img{
+    transform: scale(1.1);
+  }
+  
+  .container .popup-image{
+    position: fixed;
+    top:0; left:0; right: 0;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    z-index: 100;
+    display: none;
+  }
+  
+  .container .popup-image span{
+    position: absolute;
+    top: 0; right: 10px;
+    font-size: 40px; 
+    font-weight: bolder;
+    color: #fff;
+    background-color: black;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .container .popup-image img{
+    display: block;
+    margin: auto;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    margin-top: 2%;
+    height: 90%;
+    object-fit: cover;
+  }
+
+  /* Lookbook Ends */
+
+
+  /*Stylists Starts*/
+
+  .stylists .slide{
+    max-width: 50rem;
+    border: solid white .5rem;
+    border-radius: .5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 1.5rem;
+}
+
+.stylists .slide img{
+    height: 45rem;
+    width: 95%;
+    object-fit: cover;
+}
+
+.stylists .slide h3{
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+/*Stylists Stops*/
+
+/*Reviews Starts*/
+.reviews-slider .slide{
+    border-radius: .4rem;
+    border: solid white .5rem;
+    padding:2rem;
+    height: 45rem;
+    margin-bottom: 4rem;
+    user-select: none;
+ }
+ 
+ .reviews-slider .slide p{
+    line-height: 2;
+    font-size: 1.6rem;
+    color:var(--light-white);
+ }
+ 
+ .reviews-slider .slide .user{
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+    margin-top: 1.5rem;
+ }
+ 
+ .reviews-slider .slide .user img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+ }
+ 
+ .reviews-slider .slide .user h3{
+    font-size: 2rem;
+    color:var(--white);
+    margin-bottom: .7rem;
+ }
+ 
+ .reviews-slider .stars i{
+    font-size: 2rem;
+    color: yellow;
+ }
+
+ .reviews .swiper-wrapper p{
+    text-transform: none;
+ }
+
+
+ footer{
+  height: 10rem;
+  background: black;
+  position: relative;
+}
+
+footer *{
+  color: white;
+}
+
+footer .socmediacontent{
+  position: absolute;
+  font-size: 2rem;
+  text-align: left;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+footer .socmediacontent .socialmedia i:hover{
+  color: green;
+}
+/*Reviews Stops*/
+
+/*Media Queries Start*/
+ @media (max-width: 991px){
+  html{
+      font-size: 55%;
+  }
+
+  .home .row .content h3{
+      font-size: 8rem;
+  }
+}
+@media (max-width: 768px){
+  header .wholenav #menu-btn{
+      display: inline-block;
+  }
+
+  header #menu-btn.fa-times{
+      transform: rotate(180deg);
+  }
+
+  header .wholenav .navbar{
+      position: absolute;
+      top: 99%; left: 0; right: 0;
+      border-top: .1rem white;
+      border-bottom: .1rem white;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      background-color: white;
+    }
+
+  header .wholenav .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .wholenav .navbar a{
+      display: block;
+      margin: 2rem;
+  }
+
+  .home .row .content h3{
+      font-size: 6rem;
+  }
+}
+
+@media (max-width: 456px){
+  html{
+      font-size: 50%;
+  }
+
+  .home .row .content h3{
+      font-size: 5rem;
+  }
+}
+
+/*Media Queries Stop*/
